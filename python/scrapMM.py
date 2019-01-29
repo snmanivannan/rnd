@@ -7,7 +7,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 #Export the results to text file
 def WriteLog(arr):
     with open('scrappedData.txt', 'a',encoding='utf-8') as file:
@@ -20,8 +19,7 @@ def WriteLog(arr):
 browser = webdriver.Firefox()
 browser.get('http://www.sitename.com/regularsearch.php')
 arr = []
-try:
-    
+try:    
     #Select the filtered options
     browser.find_element_by_xpath("//select[@id='from_age']/option[text()='23']").click()
     browser.find_element_by_xpath("//select[@id='to_age']/option[text()='28']").click()
